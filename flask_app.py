@@ -2,7 +2,7 @@
 # A very simple Flask Hello World app for you to get started with...
 
 from flask import Flask
-import rhino3dm import *
+from rhino3dm import *
 
 app = Flask(__name__)
 
