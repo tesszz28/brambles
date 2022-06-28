@@ -8,7 +8,7 @@ from openpyxl import load_workbook
 
 #wb = load_workbook('C:/Users/danae/Desktop/Stats IC Workbook.xlsx')
 
-wb = load_workbook('Stats IC Workbook.xlsx')
+wb = load_workbook('/home/tesszz28/brambles/Stats IC Workbook.xlsx')
 
 
 app = Flask(__name__) #name of the module currently running
