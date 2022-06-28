@@ -17,7 +17,7 @@ wsn = wb.sheetnames
 
 @app.route('/')
 def home():
-    return 'Hello from UNSW CODE2120!'
+    return 'Hello from UNSW CODE2120! Please type /sheets and input paramters'
 
 
 @app.route('/sheets')
@@ -30,7 +30,7 @@ def sheetname_display():
     cell = args.get("cell")
     #if sheetnumber in range(len(wb.sheetnames)): #and sheetname is None:
     if None not in (sheetnumber,sheetname):
-        resp = 'not valid'
+        resp = 'You can only use one of the parameters sheetnumber & sheetname at a time'
     elif sheetnumber is not None:
         resp_sheetname = wsn[int(sheetnumber)]
         ws = wb[resp_sheetname]
@@ -40,7 +40,7 @@ def sheetname_display():
         ws = wb[sheetname]
         resp = ws[cell].value
     else:
-        resp = 'please define parameters'
+        resp = 'Please define parameters. You must pick either sheetname or sheetnumber & input a cell value'
     return resp
 
     
