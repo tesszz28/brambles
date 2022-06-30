@@ -32,7 +32,7 @@ def sheetname_display():
     if None not in (sheetnumber,sheetname):
         resp = 'You can only use one of the parameters sheetnumber & sheetname at a time'
     elif sheetnumber:
-        resp = 'sheetnumber:' wsn[int(sheetnumber)]
+        resp = 'sheetnumber:' + wsn[int(sheetnumber)]
         if cell:
             ws = wb[resp]
             resp = ws[cell].value
