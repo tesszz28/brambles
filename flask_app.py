@@ -37,10 +37,10 @@ def sheetname_display():
             ws = wb[resp]
             resp = ws[cell].value
     elif sheetname:
-        resp = 'sheetname:' str(wsn.index(str(sheetname)))
+        resp = 'sheetname:' + str(wsn.index(str(sheetname)))
         if cell:
             ws = wb[sheetname]
-            resp = 'cell:' ws[cell].value
+            resp = 'cell:' + ws[cell].value
     else:
         resp = 'Please define parameters. You must pick either sheetname or sheetnumber before inputting a cell value'
     return resp
