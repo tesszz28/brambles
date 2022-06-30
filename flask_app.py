@@ -31,14 +31,14 @@ def sheetname_display():
     #if sheetnumber in range(len(wb.sheetnames)): #and sheetname is None:
     if None not in (sheetnumber,sheetname):
         resp = 'You can only use one of the parameters sheetnumber & sheetname at a time'
-    elif sheetnumber:
+    elif sheetnumber is not None:
         resp = 'Sheet Number: ' + wsn[int(sheetnumber)]
-        if cell:
+        if cell is not None:
             ws = wb[resp]
             resp = ws[cell].value
-    elif sheetname:
+    elif sheetname is not None:
         resp = 'Sheet Name: ' + str(wsn.index(str(sheetname)))
-        if cell:
+        if cell is not None:
             ws = wb[sheetname]
             resp = ws[cell].value
     else:
