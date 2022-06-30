@@ -34,12 +34,12 @@ def sheetname_display():
         resp = 'Sheet Name: ' + wsn[int(sheetnumber)]
         if cell is not None:
             ws = wb[resp1]
-            resp = ws[cell].value
+            resp = 'Cell Value: ' + ws[cell].value
     elif sheetname is not None:
         resp = 'Sheet Number: ' + str(wsn.index(str(sheetname)))
         if cell is not None:
             ws = wb[sheetname]
-            resp = ws[cell].value
+            resp = 'Cell Value: ' + ws[cell].value
     else:
         resp = 'Please define parameters. You must pick either sheetname or sheetnumber before inputting a cell value'
     return resp
